@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 // FireBase Auth
@@ -44,6 +44,13 @@ function Register() {
       });
   };
 
+  useEffect(() => {
+    if (localStorage.getItem("social-app- user")) {
+      navigate("/");
+      console.log("Login");
+    }
+  });
+
   return (
     <div className="h-screen flex bg-color-primary flex-col justify-between items-center">
       {/* Top Shape */}
@@ -87,7 +94,7 @@ function Register() {
         <div className="flex justify-end">
           <button
             onClick={registerUser}
-            className=" bg-color-text  hover:bg-color-third
+            className=" bg-color-secondary  hover:bg-color-third
           text-white rounded-sm mr-3  px-6 py-1"
           >
             Register

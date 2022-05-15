@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Loader from "../components/Loader";
 // Login
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { fireDb, app } from "./../firebaseConfig";
-import { addDoc, collection, doc, getDoc } from "firebase/firestore";
+import { doc, getDoc } from "firebase/firestore";
 import { toast } from "react-toastify";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -35,6 +35,12 @@ function Login() {
         dispatch({ type: "hideLoading" });
       });
   };
+
+  useEffect(() => {
+    if (localStorage.getItem("social-app- user")) {
+      navigate("/");
+    }
+  });
 
   return (
     <div className="h-screen flex flex-col justify-between items-center">

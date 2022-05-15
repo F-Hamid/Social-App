@@ -1,12 +1,12 @@
 import React from "react";
 import DefaultLayout from "../components/DefaultLayout";
 
-function Home() {
+function Shares() {
   return (
     <DefaultLayout>
-      <div>Home</div>
+      <div>Shares</div>
     </DefaultLayout>
   );
 }
 
-export default Home;
+export default Shares;

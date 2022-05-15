@@ -1,13 +1,30 @@
 module.exports = {
+  mode: "jit",
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        "color-primary": "#ef4444",
-        "color-secondary": "#88E0EF",
-        "color-third": "#573391",
-        "color-extra": "#FF9B6A",
+        "color-primary": "#EB5353",
+        "color-secondary": "#187498",
+        "color-third": "#36AE7C",
+        "color-extra": "#F9D923",
         "color-text": "#161E54",
+      },
+      screens: {
+        "2xl": { max: "1535px" },
+        // => @media (max-width: 1535px) { ... }
+
+        xl: { max: "1279px" },
+        // => @media (max-width: 1279px) { ... }
+
+        lg: { max: "1023px" },
+        // => @media (max-width: 1023px) { ... }
+
+        md: { max: "767px" },
+        // => @media (max-width: 767px) { ... }
+
+        sm: { max: "639px" },
+        // => @media (max-width: 639px) { ... }
       },
     },
   },

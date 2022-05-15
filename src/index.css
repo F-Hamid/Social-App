@@ -3,6 +3,26 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 82%;
+  }
+}
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 72%;
+  }
+}
+@media screen and (max-width: 750px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 45%;
+  }
+}
 * {
   font-family: "Montserrat", sans-serif;
 }
