@@ -58,7 +58,6 @@ function App() {
 
 function ProtectedRout({ children }) {
   if (localStorage.getItem("social-app- user")) {
-    console.log("children");
     return children;
   } else {
     return <Navigate to="/login" />;

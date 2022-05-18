@@ -33,7 +33,7 @@ const Header = () => {
   ];
   return (
     <div className="p-5 relative class  bg-color-primary w-[8rem] shadow-lg  ">
-      <div className="h-screen text-[3rem] flex flex-col justify-start items-center p-5  ">
+      <div className="h-1/1 text-[3rem] flex flex-col justify-start items-center p-5  ">
         {/* <div className="relative flex flexc items-center justify-center h-12 w-12 ùt-2 mb-2 mx-auto shadow-lg "> */}
         {menuItems.map(({ path, title, icon }) => {
           return (
