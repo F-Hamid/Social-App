@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
 // import { CgMenuRight } from "react-icons/cg";
 import { SiHomeadvisor } from "react-icons/si";
@@ -7,7 +7,6 @@ import { ImShare } from "react-icons/im";
 import { BsPersonCircle } from "react-icons/bs";
 
 const Header = () => {
-  const [showMenu, setShowMenu] = useState(false);
   const location = useLocation();
   const menuItems = [
     {
